@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9f7f2">
+  <meta name="description" content="Install MeeTube TV on Android TV, Google TV or a Fire OS device with a USB pen drive or your Android phone.">
+  <title>Install MeeTube TV</title>
+  <link rel="icon" type="image/png" href="meetube-heart.png">
+  <script src="theme.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="downloads.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="wrap nav support-nav" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="MeeTube home"><img src="meetube-heart.png" width="35" height="32" alt="">MeeTube</a>
+      <div class="nav-links">
+        <a href="tv-install.html" aria-current="page">TV guide</a>
+        <a href="support.html">Support</a>
+      </div>
+      <button class="theme-toggle" type="button" aria-label="Dark theme" aria-pressed="false" hidden>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path class="moon" d="M20.5 14A8.8 8.8 0 0 1 10 3.5 8.8 8.8 0 1 0 20.5 14Z"/>
+          <g class="sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></g>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <main class="wrap tv-guide" id="main">
+    <header class="tv-guide-intro">
+      <div>
+        <h1>Install <em>MeeTube TV</em></h1>
+        <p class="intro">For Android TV, Google TV and Fire TV devices running Fire OS. A USB pen drive is an easy way to get started if your TV has a USB port.</p>
+        <nav class="guide-jumps" aria-label="TV installation topics">
+          <a href="#usb">USB pen drive</a>
+          <a href="#phone">MeeTube mobile app</a>
+          <a href="#settings">TV settings</a>
+        </nav>
+      </div>
+      <div class="tv-stage">
+        <div class="tv-set">
+          <img src="tv_home.jpg" width="1280" height="720" alt="MeeTube TV Home with its sidebar and video recommendations.">
+        </div>
+      </div>
+    </header>
+
+    <section class="guide-section" id="usb" aria-labelledby="usb-heading" data-platform="tv">
+      <div>
+        <h2 id="usb-heading">Use a <em>USB pen drive</em></h2>
+        <p>Have a computer, a pen drive and a TV that can read USB storage? Grab the universal TV installer here.</p>
+        <a class="button" data-apk="universal" href="https://github.com/yashoncode/meetube-tv/releases/download/tv-v1.1.2/MeeTubeTV_1.1.2_universal.apk">Download TV APK</a>
+      </div>
+      <ol class="guide-steps">
+        <li><strong>Copy the TV APK to your pen drive.</strong> On your computer, download the file above and copy it to the drive. Its name starts with <samp>MeeTubeTV_</samp> and ends in <samp>_universal.apk</samp>. Eject the drive.</li>
+        <li><strong>Open it on the TV.</strong> Plug the drive into the TV. Open a file manager, choose the USB drive and select the APK. If you need a file manager, install one from your TV’s app store.</li>
+        <li><strong>Allow the file manager to install the app.</strong> If the TV asks for permission, choose <b>Settings</b> and allow installs from that file manager. Return to the file and select it again. See <a href="#settings">TV settings</a> for menu names.</li>
+        <li><strong>Select Install, then Open.</strong> The next time you want to watch, choose MeeTube TV from your TV’s apps.</li>
+      </ol>
+    </section>
+
+    <section class="guide-section" id="phone" aria-labelledby="phone-heading">
+      <div>
+        <h2 id="phone-heading">Use the <em>MeeTube mobile app</em></h2>
+        <p>MeeTube can install the TV app over your home Wi-Fi. You’ll need an Android phone running Android 8.0 or later and a TV that supports network debugging.</p>
+        <a class="text-link" href="index.html#install">Get MeeTube for your phone</a>
+      </div>
+      <ol class="guide-steps">
+        <li><strong>Connect your phone and TV to the same Wi-Fi.</strong> In MeeTube, open <b>Settings › About</b> and scroll to the MeeTube TV card. Open its installer. On the <b>Install on TV</b> screen, choose <b>Google TV / Android TV</b> or <b>Fire TV</b>.</li>
+        <li><strong>Enable debugging on your TV.</strong> Follow the phone-install settings for <a href="#android-settings">Android TV or Google TV</a> or <a href="#fire-settings">Fire TV</a> below. If your TV only offers wireless debugging with a pairing code, use the <a href="#usb">USB pen drive method</a>.</li>
+        <li><strong>Find the TV in MeeTube.</strong> Tap <b>Search my Wi-Fi</b> and allow local network access if asked. Select your TV’s address. If it doesn’t appear, enter its IPv4 address in <b>TV IP address</b>. You can find the address in your TV’s network settings below.</li>
+        <li><strong>Tap Install MeeTube TV.</strong> When your TV asks to allow debugging from your phone, select <b>Allow</b> on the TV. MeeTube downloads the TV app, installs it and opens it. If it doesn’t open automatically, launch MeeTube TV from your TV’s apps.</li>
+      </ol>
+    </section>
+
+    <section class="guide-section" id="settings" aria-labelledby="settings-heading">
+      <div>
+        <h2 id="settings-heading">Find your <em>TV settings</em></h2>
+        <p>Menu names vary by TV model and software version.</p>
+      </div>
+      <div class="guide-settings">
+        <h3 id="android-settings">Android TV &amp; Google TV</h3>
+        <p><strong>USB pen drive.</strong> From the APK’s permission prompt, open <b>Settings</b> and allow the file manager. To find this later, look under <b>Apps</b> or <b>Privacy</b> for <b>Security &amp; restrictions › Unknown sources</b> or <b>Install unknown apps</b>.</p>
+        <p><strong>Phone installation.</strong> Open <b>Settings › System › About</b> (on older TVs, <b>Device Preferences › About</b>). Press <b>Android TV OS build</b> or <b>Build</b> seven times. Go back to <b>System</b> or <b>Device Preferences</b>, open <b>Developer options</b> and enable <b>USB debugging</b>. If offered, also enable <b>Network debugging</b> or <b>ADB over network</b>. You can turn debugging off after installation.</p>
+        <p><strong>TV IP address.</strong> Open <b>Settings › Network &amp; Internet</b> and select your connected Wi-Fi network.</p>
+        <h3 id="fire-settings">Fire TV with Fire OS</h3>
+        <p>Open <b>Settings › My Fire TV › Developer Options</b>. If Developer Options is hidden, open <b>My Fire TV › About</b>, highlight the device name and press the remote’s select button seven times. Press Back to see Developer Options.</p>
+        <p><strong>USB pen drive.</strong> In Developer Options, open <b>Install unknown apps</b> and enable your file manager. Older versions show a single <b>Apps from Unknown Sources</b> switch.</p>
+        <p><strong>Phone installation.</strong> Enable <b>ADB debugging</b> in Developer Options. You can turn it off after installation.</p>
+        <p><strong>TV IP address.</strong> Open <b>Settings › My Fire TV › About › Network</b>.</p>
+      </div>
+    </section>
+    <a class="text-link" href="index.html#tv">Back to MeeTube TV</a>
+  </main>
+</body>
+</html>
