@@ -23,6 +23,8 @@
       counter.hidden = false;
     }
     heading.textContent = 'Combined GitHub stars';
+    const fact = tallyLink.closest('.fact-stars');
+    if (fact) fact.hidden = false;
     tallyLink.hidden = false;
   }
 

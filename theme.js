@@ -13,7 +13,7 @@
   function apply() {
     const dark = choice ? choice === 'dark' : system.matches;
     root.dataset.theme = dark ? 'dark' : 'light';
-    if (chromeColor) chromeColor.content = dark ? '#181919' : '#f9f7f2';
+    if (chromeColor) chromeColor.content = dark ? '#17181a' : '#ffffff';
     if (toggle) {
       toggle.setAttribute('aria-pressed', String(dark));
       toggle.title = dark ? 'Switch to light theme' : 'Switch to dark theme';

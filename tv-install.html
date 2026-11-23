@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f9f7f2">
+  <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Install MeeTube TV on Android TV, Google TV or a Fire OS device with a USB pen drive or your Android phone.">
   <title>Install MeeTube TV</title>
   <link rel="icon" type="image/png" href="meetube-heart.png">
@@ -14,25 +14,31 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <nav class="wrap nav support-nav" aria-label="Main navigation">
-      <a class="brand" href="index.html" aria-label="MeeTube home"><img src="meetube-heart.png" width="35" height="32" alt="">MeeTube</a>
+    <nav class="wrap nav" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="MeeTube home"><img src="meetube-heart.png" width="28" height="26" alt="">MeeTube</a>
       <div class="nav-links">
+        <a href="index.html">App overview</a>
         <a href="tv-install.html" aria-current="page">TV guide</a>
         <a href="support.html">Support</a>
       </div>
-      <button class="theme-toggle" type="button" aria-label="Dark theme" aria-pressed="false" hidden>
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path class="moon" d="M20.5 14A8.8 8.8 0 0 1 10 3.5 8.8 8.8 0 1 0 20.5 14Z"/>
-          <g class="sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></g>
-        </svg>
-      </button>
+      <div class="nav-tools">
+        <a class="github-link" href="https://github.com/yashoncode/meetube" aria-label="MeeTube on GitHub">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .9a11.1 11.1 0 0 0-3.51 21.64c.55.1.76-.24.76-.54v-2.08c-3.09.67-3.74-1.31-3.74-1.31-.51-1.29-1.24-1.64-1.24-1.64-1.01-.69.08-.68.08-.68 1.12.08 1.7 1.14 1.7 1.14.99 1.7 2.6 1.21 3.23.93.1-.72.39-1.21.7-1.49-2.47-.28-5.07-1.24-5.07-5.5 0-1.22.44-2.21 1.15-2.99-.11-.28-.5-1.42.11-2.95 0 0 .94-.3 3.05 1.14a10.66 10.66 0 0 1 5.56 0c2.12-1.44 3.05-1.14 3.05-1.14.61 1.53.22 2.67.11 2.95.72.78 1.15 1.77 1.15 2.99 0 4.27-2.6 5.22-5.08 5.5.4.35.75 1.02.75 2.06V22c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg>
+        </a>
+        <button class="theme-toggle" type="button" aria-label="Dark theme" aria-pressed="false" hidden>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path class="moon" d="M20.5 14A8.8 8.8 0 0 1 10 3.5 8.8 8.8 0 1 0 20.5 14Z"/>
+            <g class="sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></g>
+          </svg>
+        </button>
+      </div>
     </nav>
   </header>
 
   <main class="wrap tv-guide" id="main">
     <header class="tv-guide-intro">
       <div>
-        <h1>Install <em>MeeTube TV</em></h1>
+        <h1>Install MeeTube TV</h1>
         <p class="intro">For Android TV, Google TV and Fire TV devices running Fire OS. A USB pen drive is an easy way to get started if your TV has a USB port.</p>
         <nav class="guide-jumps" aria-label="TV installation topics">
           <a href="#usb">USB pen drive</a>
@@ -49,7 +55,7 @@
 
     <section class="guide-section" id="usb" aria-labelledby="usb-heading" data-platform="tv">
       <div>
-        <h2 id="usb-heading">Use a <em>USB pen drive</em></h2>
+        <h2 id="usb-heading">Use a USB pen drive</h2>
         <p>Have a computer, a pen drive and a TV that can read USB storage? Grab the universal TV installer here.</p>
         <a class="button" data-apk="universal" href="https://github.com/yashoncode/meetube-tv/releases/download/tv-v1.1.2/MeeTubeTV_1.1.2_universal.apk">Download TV APK</a>
       </div>
@@ -63,7 +69,7 @@
 
     <section class="guide-section" id="phone" aria-labelledby="phone-heading">
       <div>
-        <h2 id="phone-heading">Use the <em>MeeTube mobile app</em></h2>
+        <h2 id="phone-heading">Use the MeeTube mobile app</h2>
         <p>MeeTube can install the TV app over your home Wi-Fi. You’ll need an Android phone running Android 8.0 or later and a TV that supports network debugging.</p>
         <a class="text-link" href="index.html#install">Get MeeTube for your phone</a>
       </div>
@@ -77,7 +83,7 @@
 
     <section class="guide-section" id="settings" aria-labelledby="settings-heading">
       <div>
-        <h2 id="settings-heading">Find your <em>TV settings</em></h2>
+        <h2 id="settings-heading">Find your TV settings</h2>
         <p>Menu names vary by TV model and software version.</p>
       </div>
       <div class="guide-settings">
