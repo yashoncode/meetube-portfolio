@@ -135,7 +135,7 @@ button { cursor: pointer; }
 .screenshot-viewer::backdrop { background: rgb(8 11 14 / 74%); }
 .viewer-head, .viewer-controls { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .viewer-head form { margin: 0; }
-.viewer-image { display: block; width: auto; max-width: 100%; height: auto; max-height: min(68vh, 49rem); margin: .7rem auto; object-fit: contain; border-radius: .45rem; }
+.viewer-image { display: block; width: auto; max-width: 100%; height: auto; max-height: min(68vh, 49rem); margin: .7rem auto; object-fit: contain; border-radius: .45rem; touch-action: pan-y pinch-zoom; }
 .viewer-position { color: var(--muted); font-size: .9rem; }
 .viewer-controls button, .viewer-close { padding: .45rem .85rem; }
 
@@ -246,7 +246,25 @@ button { cursor: pointer; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll(root block)) {
+    .home-page::before {
+      content: ""; position: fixed; inset: 0 0 auto; height: 2px; z-index: 1;
+      background: var(--accent); pointer-events: none; transform-origin: left;
+      animation: page-progress auto linear both;
+      animation-timeline: scroll(root block);
+    }
+  }
+
   .app-icon { animation: app-float 2.4s ease-in-out 2; }
+
+  .screenshot { animation: thumbnail-arrive 220ms ease-out backwards; }
+  .screenshot-strip li:nth-child(2) .screenshot { animation-delay: 45ms; }
+  .screenshot-strip li:nth-child(3) .screenshot { animation-delay: 90ms; }
+  .screenshot-strip li:nth-child(4) .screenshot { animation-delay: 135ms; }
+  .screenshot-strip li:nth-child(5) .screenshot { animation-delay: 180ms; }
+
+  .viewer-image[data-direction] { --slide-offset: 12px; animation: viewer-arrive 150ms ease-out; }
+  .viewer-image[data-direction="previous"] { --slide-offset: -12px; }
 
   .screenshot img, .button[data-apk] .icon { transition: transform 180ms ease-out; }
   .screenshot:focus-visible img { transform: translateY(-3px); }
@@ -263,6 +281,16 @@ button { cursor: pointer; }
       animation-range: entry 0% entry 100%;
     }
   }
+}
+@keyframes page-progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+@keyframes thumbnail-arrive {
+  from { opacity: .85; transform: translateY(3px); }
+}
+@keyframes viewer-arrive {
+  from { transform: translateX(var(--slide-offset)); }
 }
 @keyframes app-float {
   50% { transform: translateY(-4px) rotate(-2deg); }
