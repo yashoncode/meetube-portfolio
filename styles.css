@@ -244,3 +244,30 @@ button { cursor: pointer; }
 
   .nav-links { gap: 1.1rem; }
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .app-icon { animation: app-float 2.4s ease-in-out 2; }
+
+  .screenshot img, .button[data-apk] .icon { transition: transform 180ms ease-out; }
+  .screenshot:focus-visible img { transform: translateY(-3px); }
+  .button[data-apk]:focus-visible .icon { transform: translateY(2px); }
+  @media (hover: hover) {
+    .screenshot:hover img { transform: translateY(-3px); }
+    .button[data-apk]:hover .icon { transform: translateY(2px); }
+  }
+
+  @supports (animation-timeline: view()) {
+    .tv-section .tv-stage {
+      animation: tv-arrive auto ease-out both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 100%;
+    }
+  }
+}
+@keyframes app-float {
+  50% { transform: translateY(-4px) rotate(-2deg); }
+}
+@keyframes tv-arrive {
+  from { transform: translateY(12px); }
+  to { transform: translateY(0); }
+}
